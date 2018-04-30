@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Place Autocomplete Address Form</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+
+   
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+        </script>
+
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7 col-sm-offset-3">
+                <div id="imaginary_container">
+                    <div class="input-group stylish-input-group">
+                        <input onFocus="geolocate()" id="autocomplete" placeholder="Enter location" type="text" class="form-control" placeholder="Search">
+                        <span class="input-group-addon">
+                            <button type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-7 col-sm-offset-3">
+
+                <table class="table" id="address">
+                    <tr>
+                        <td class="table-label">Street address</td>
+                        <td class="slimField">
+                            <input class="field" id="street_number" disabled="true"></input>
+                        </td>
+                        <td class="wideField" colspan="2">
+                            <input class="field" id="route" disabled="true"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-label">City</td>
+                        <td class="wideField" colspan="3">
+                            <input class="field" id="locality" disabled="true"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-label">State</td>
+                        <td class="slimField">
+                            <input class="field" id="administrative_area_level_1" disabled="true"></input>
+                        </td>
+                        <td class="table-label">Zip code</td>
+                        <td class="wideField">
+                            <input class="field" id="postal_code" disabled="true"></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="table-label">Country</td>
+                        <td class="wideField" colspan="3">
+                            <input class="field" id="country" disabled="true"></input>
+                        </td>
+                    </tr>
+                </table>
+                </table>
+                <button type="button" onclick="addLocation()" class="btn btn-success">Add location</button>
+                <button type="button" onclick="calculateTSP(true)" class="btn btn-success">Calculate best route with deviation</button>
+                <button type="button" onclick="calculateTSP(false)" class="btn btn-success">Calculate best route without deviation</button>
+                <hr>
+
+                <ul id='locationList' class="list-group">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src='/js/googleAddress.js'></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{apiKey}}&libraries=places&callback=initAutocomplete" async defer></script>
+</body>
+
+</html>
