@@ -7,7 +7,7 @@ for anyone who is willing to further develop this project.
 
 This readme has three sections.
 1. [Install instructions](#Install-instructions).
-2. [Software architecture](#Architecture).
+2. [Software architecture](https://github.com/RimacV/node-tsp/blob/master/Readme.md#2-architecture).
 3. [Project file structure](#Project-File-Structure).
 
 ## 1. Install instructions
