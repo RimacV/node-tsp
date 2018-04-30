@@ -6,9 +6,9 @@ This readme provides installation instructions and some architectural informatio
 for anyone who is willing to further develop this project.
 
 This readme has three sections.
-1. [Install instructions](#Install instructions).
+1. [Install instructions](#Install-instructions).
 2. [Software architecture](#Architecture).
-3. [Project file structure](Project File Structure).
+3. [Project file structure](#Project-File-Structure).
 
 ## 1. Install instructions
 To get the project installed you can either use the provided dockerfile,
